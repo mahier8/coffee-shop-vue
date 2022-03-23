@@ -1,0 +1,7 @@
+body {
+  /* this should also remove the white space on the left, globally  */
+  margin: 0;
+}
+p {
+  font-style: italic;
+}
