@@ -1,4 +1,4 @@
-# cafe-bom-bom
+# coffee shop
 
 ## Project setup
 ```
