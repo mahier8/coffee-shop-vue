@@ -1,5 +1,14 @@
 <template>
   <Navbar />
+  <div class="home">
+    <Carousel class="carousel" v-slot="{ currentSlide }">
+      <Slide v-for="(slide, index) in carouselSlides" :key="index">
+        <div v-show="currentSlide === index + 1" class="slide-info">
+          <img :src="require(`../assets/${slide}.jpg`)" alt="" />
+        </div>
+      </Slide>
+    </Carousel>
+  </div>
   <h1>{{ title }}</h1>
   <!-- the if condition, setting the modal to true -->
   <div v-if="showModal">
@@ -11,6 +20,9 @@
 </template>
 
 <script>
+import Carousel from "../components/Carousel.vue";
+import Slide from "../components/Slide.vue";
+
 import Modal from "../components/Modal.vue";
 import Navbar from "../components/Navbar.vue";
 export default {
@@ -18,6 +30,8 @@ export default {
   components: {
     Modal,
     Navbar,
+    Carousel,
+    Slide,
   },
   data() {
     return {
@@ -25,6 +39,13 @@ export default {
       header: "Buy our coffee!",
       text: "Coffees are half price",
       showModal: false,
+    };
+  },
+  setup() {
+    const carouselSlides = ["cappucino", "coffeeAndCake", "muffin"];
+
+    return {
+      carouselSlides,
     };
   },
   // we need methods to introduce functions in the Options API
@@ -58,5 +79,26 @@ button {
   border-radius: 8px;
   padding: 8px;
   margin-left: 10px;
+}
+
+/* the carousel */
+.carousel {
+  position: relative;
+  max-height: 50vh;
+  height: 50vh;
+}
+.slide-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 100%;
+  height: 100%;
+}
+
+.slide-info img {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 </style>

@@ -1,19 +1,11 @@
 <template>
-  <div></div>
-</template>
-
-<script>
-export default {};
-</script>
-
-<style></style>
-<template>
   <div class="carousel">
     <slot :currentSlide="currentSlide" />
 
     <!-- Navigation -->
     <div class="navigate">
       <div class="toggle-page left">
+        <!-- I need to fix the icons here/should be similar to my navigation page -->
         <i @click="prevSlide" class="fa-solid fa-chevron-left"></i>
       </div>
       <div class="toggle-page right">
@@ -93,3 +85,59 @@ export default {
   },
 };
 </script>
+<style scoped>
+.navigate {
+  padding: 0 16px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-page {
+  display: flex;
+  flex: 1;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+/* I need to fix the icons here */
+i {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: rgb(135, 75, 185);
+  color: #fff;
+}
+
+.pagination {
+  position: absolute;
+  bottom: 24px;
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.pagination .active {
+  background: rgb(135, 75, 185);
+}
+</style>
