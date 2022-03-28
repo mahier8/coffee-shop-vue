@@ -47,7 +47,6 @@ export default {
 
 <style>
 nav {
-  background: aqua;
   height: 65px;
   display: flex;
   justify-content: space-evenly;

@@ -9,30 +9,36 @@
       </Slide>
     </Carousel>
   </div>
-  <h1>{{ title }}</h1>
+  <!-- the modal -->
+  <!-- <h1>{{ title }}</h1> -->
   <!-- the if condition, setting the modal to true -->
-  <div v-if="showModal">
-    <!-- our custom event is called close -->
-    <Modal :header="header" :text="text" theme="sale" @close="toggleModal" />
-  </div>
+  <!-- <div v-if="showModal"> -->
+  <!-- our custom event is called close -->
+  <!-- <Modal :header="header" :text="text" theme="sale" @close="toggleModal" /> -->
+  <!-- </div> -->
   <!-- we click here to toggle the modal -->
-  <button @click="toggleModal">Show Modal</button>
+  <!-- <button @click="toggleModal">Show Modal</button> -->
+  <Menu />
 </template>
 
 <script>
 import Carousel from "../components/Carousel.vue";
 import Slide from "../components/Slide.vue";
 
-import Modal from "../components/Modal.vue";
+// import Modal from "../components/Modal.vue";
 import Navbar from "../components/Navbar.vue";
+import Menu from "../components/Menu.vue";
+
 export default {
   name: "Home",
   components: {
-    Modal,
+    // Modal,
     Navbar,
     Carousel,
     Slide,
+    Menu,
   },
+
   data() {
     return {
       title: "Cafe Bom Bom",
@@ -64,7 +70,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background: #2c3e50;
 }
 h1 {
   color: blueviolet;
