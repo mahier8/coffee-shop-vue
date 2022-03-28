@@ -12,7 +12,9 @@
     <div class="menu">
       <div class="menuItem">
         <div class="menuItemImage">
-          <img class="IconPic" src="../assets/coffeeIcon.png" alt="" />
+          <router-link to="/order"
+            ><img class="IconPic" src="../assets/coffeeIcon.png" alt=""
+          /></router-link>
         </div>
         <div class="menuItemName">Order/주문</div>
       </div>
