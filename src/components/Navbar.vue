@@ -8,11 +8,11 @@
     <transition name="mobile-nav">
       <ul class="mobile-nav" v-show="mobileNav">
         <!-- to close the sidebar -->
-        <fa icon="bars" @click="toggleMobileNav" />
-        <router-link class="link" to="#">Home</router-link>
-        <router-link class="link" to="#">Blogs</router-link>
-        <router-link class="link" to="#">Create Post</router-link>
-        <router-link class="link" to="#">Login/Register</router-link>
+        <fa icon="bars" class="close-bar" @click="toggleMobileNav" />
+        <router-link class="link" to="/order">Order/주문</router-link>
+        <router-link class="link" to="#">Coupons/쿠폰</router-link>
+        <router-link class="link" to="#">Events/이벤트</router-link>
+        <router-link class="link" to="#">Stamps/우표</router-link>
       </ul>
     </transition>
     <router-link :to="{ name: 'Home' }">
@@ -68,10 +68,55 @@ nav img {
   top: 0;
   left: 0;
   /* for the sidebar to stand over the carousel */
-  z-index: 999;
+  z-index: 2;
 }
+
+.mobile-nav-enter-active,
+.mobile-nav-leave-active {
+  transition: opacity 0.7s ease-in-out;
+}
+
+.mobile-nav-enter-from,
+.mobile-nav-leave-to {
+  opacity: 0;
+}
+
+.mobile-nav-enter-to,
+.mobile-nav-leave-from {
+  opacity: 1;
+}
+
+/* for the width transition, but had some problems with how the links loaded */
+/* .mobile-nav-enter-active,
+.mobile-nav-leave-active {
+  transition: width 0.5s ease-in-out;
+}
+
+.mobile-nav-enter-from,
+.mobile-nav-leave-to {
+  width: 0;
+}
+
+.mobile-nav-enter-to,
+.mobile-nav-leave-from {
+  width: 250;
+} */
+
 .link {
   padding: 15px 0;
   color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+}
+
+.link:hover {
+  background-color: #454444;
+  margin-left: 0;
+}
+
+.close-bar {
+  color: aliceblue;
+  margin-bottom: 20px ;
+  margin-right: 180px;
 }
 </style>

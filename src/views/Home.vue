@@ -48,7 +48,7 @@ export default {
     };
   },
   setup() {
-    const carouselSlides = ["cappucino", "coffeeAndCake", "muffin"];
+    const carouselSlides = ["coffee1", "coffee2", "coffee3"];
 
     return {
       carouselSlides,
@@ -103,7 +103,7 @@ button {
 
 .slide-info img {
   min-width: 100%;
-  height: 100%;
+  max-height: 100%;
   object-fit: cover;
 }
 </style>
