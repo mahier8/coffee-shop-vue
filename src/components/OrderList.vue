@@ -1,5 +1,5 @@
 <template>
-  <div class="post-list">
+  <div class="order-list">
     <!-- creating a for loop -->
     <div v-for="order in orders" :key="order.id">
       <SingleOrder :order="order" />
@@ -21,4 +21,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.order-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+</style>

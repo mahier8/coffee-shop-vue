@@ -51,6 +51,7 @@ nav {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  cursor: pointer;
 }
 nav img {
   width: 11%;
@@ -69,6 +70,7 @@ nav img {
   left: 0;
   /* for the sidebar to stand over the carousel */
   z-index: 2;
+  cursor: pointer;
 }
 
 .mobile-nav-enter-active,

@@ -2,32 +2,31 @@
   "orders": [
     {
       "id": 1,
-
-      "image": "require('..assets/coffeeIcon.png')",
+      "image": "coffeeIcon.png",
       "title": "Americano",
       "price": 2000
     },
     {
       "id": 2,
-      "image": "./src/assets/coffeeIcon.png",
+      "image": "coffeeIcon.png",
       "title": "Iced Americano",
       "price": 2000
     },
     {
       "id": 3,
-      "image": "../src/assets/coffeeIcon.png",
+      "image": "coffeeIcon.png",
       "title": "Latte",
       "price": 2500
     },
     {
       "id": 4,
-      "image": "../src/assets/coffeeIcon.png",
+      "image": "coffeeIcon.png",
       "title": "Decaf",
       "price": 3000
     },
     {
       "id": 5,
-      "image": "../src/assets/coffeeIcon.png",
+      "image": "coffeeIcon.png",
       "title": "Tea",
       "price": 1500
     }

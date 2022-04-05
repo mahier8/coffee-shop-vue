@@ -114,9 +114,9 @@ i {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  background: rgb(135, 75, 185);
+  width: 30px;
+  height: 30px;
+  background: rgb(232, 188, 124);
   color: #fff;
 }
 
@@ -140,6 +140,6 @@ span {
 }
 
 .pagination .active {
-  background: rgb(135, 75, 185);
+  background: rgb(232, 188, 124);
 }
 </style>
