@@ -119,6 +119,5 @@ nav img {
 .close-bar {
   color: aliceblue;
   margin-bottom: 20px ;
-  margin-right: 180px;
 }
 </style>

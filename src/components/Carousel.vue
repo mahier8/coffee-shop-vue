@@ -36,7 +36,7 @@ export default {
     const autoPlayEnabled = ref(true);
     // Adjust the time below for the carousel pics
     // 5000 = 5 seconds
-    const timeoutDuration = ref(50000);
+    const timeoutDuration = ref(5000);
 
     // next slide
     const nextSlide = () => {

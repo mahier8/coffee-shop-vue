@@ -1,13 +1,16 @@
 <template>
   <div class="singleOrderCard">
-    <img :src="require('../assets/' + order.image)" alt="{{order.title}}" class="singleOrderCardImage" />
+    <div class="singleOrderCardDiv">
+          <img :src="require('../assets/' + order.image)" alt="{{order.title}}" class="singleOrderCardImage" />
+    </div>
     <!-- <img :src="require('./assets/logo.png')"/>
     v-bind:style="{ 'background-image': 'url(' + require('../assets/img/covers/' + story.cover) + ')' }" -->
 <!-- 
     </div> -->
     <h3>
-      {{ order.title }} <span>{{ order.price }}</span>
+      {{ order.title }} 
     </h3>
+    <span>{{ order.price }}</span>
   </div>
 </template>
 
@@ -28,9 +31,23 @@ export default {
   margin: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; 
 }
-.singleOrderCardImage {
-    width: 30%;
 
+.singleOrderCardDiv {
+  width: 120px;
+  height: 120px;
 }
+
+.singleOrderCardImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+
 </style>
